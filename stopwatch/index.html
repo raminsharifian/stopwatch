@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Link to an external CSS file for styling the page -->
+    <!-- Include the main TypeScript file, deferred so it will execute after the HTML is parsed -->
+    <title>Stopwatch</title>
+    <link rel="stylesheet" href="/vendors/default.min.css" />
+    <script src="/vendors/highlight.min.js"></script>
+    <!-- Custom Styles -->
+    <style>
+      .section-title {
+        margin-top: 40px;
+        margin-bottom: 20px;
+      }
+      .screenshot-img {
+        max-width: 100%;
+        height: auto;
+      }
+      .btn-custom {
+        margin-top: 10px;
+      }
+    </style>
+    <script>
+      hljs.highlightAll();
+    </script>
+    <script type="module" crossorigin src="/assets/index-C-GYuHY4.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-BiiB7CFo.css">
+  </head>
+
+  <body>
+    <!-- A section element with the ID 'stopwatch' which will be styled and manipulated with JavaScript -->
+    <section id="stopwatch"></section>
+    <section id="user-guide">
+      <h1>Stopwatch Guide</h1>
+      <p>Welcome to the Stopwatch App!</p>
+      <p>
+        This application allows you to control a stopwatch with the following
+        features:
+      </p>
+      <ul>
+        <li>
+          <strong>Start/Pause:</strong> Click the stopwatch or press "Space" or
+          "P" to toggle between start and pause.
+        </li>
+        <li>
+          <strong>Reset:</strong> Press the "R" key to reset the stopwatch.
+        </li>
+        <li>
+          <strong>Automatic State Saving:</strong> Your stopwatch's state is
+          saved automatically in the browser's localStorage, so it persists even
+          when you refresh the page.
+        </li>
+      </ul>
+      <p>
+        Follow the instructions to use the stopwatch efficiently. Happy timing!
+      </p>
+      <div class="container">
+        <!-- Customizing Keybindings Section -->
+        <div id="customize" class="section">
+          <h2 class="section-title">Customizing Keybindings</h2>
+          <p>
+            You can customize the keybindings used for controlling the stopwatch
+            by modifying the `statusKeybindings` and `resetButton` options in
+            the `Stopwatch` class constructor.
+          </p>
+          <pre><code class="language-typescript">
+new Stopwatch("Stopwatch", element, true, 0, ["Space", "KeyS"], "KeyT");
+          </code></pre>
+          <p>In the above example:</p>
+          <ul>
+            <li>
+              <code>"Space"</code> and <code>"KeyS"</code> will toggle between
+              play and pause.
+            </li>
+            <li><code>"KeyT"</code> will reset the stopwatch.</li>
+          </ul>
+        </div>
+
+        <!-- Contributing Section -->
+        <div id="contributing" class="section">
+          <h2 class="section-title">Contributing</h2>
+          <p>
+            If you would like to contribute to the project, feel free to fork
+            the repository and submit a pull request. For any issues or
+            suggestions, please open an issue on the
+            <a
+              href="https://github.com/raminsharifian/stopwatch/issues"
+              target="_blank"
+              >GitHub repository</a
+            >.
+          </p>
+        </div>
+
+        <!-- License Section -->
+        <div id="license" class="section">
+          <h2 class="section-title">License</h2>
+          <p>
+            This project is licensed under the ISC License. See the
+            <a
+              href="https://github.com/raminsharifian/stopwatch/blob/main/LICENSE"
+              target="_blank"
+              >LICENSE</a
+            >
+            file for details.
+          </p>
+        </div>
+      </div>
+      <div>
+        Developed with &hearts; by
+        <a
+          class="custom-anchor"
+          href="http://github.com/raminsharifian"
+          target="_blank"
+          rel="noopener noreferrer"
+          >raminsharifian on GitHub</a
+        >
+      </div>
+    </section>
+  </body>
+</html>
