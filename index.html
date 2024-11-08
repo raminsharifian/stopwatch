@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Link to an external CSS file for styling the page -->
+    <link rel="stylesheet" href="/src/styles.css" />
+    <!-- Include the main TypeScript file, deferred so it will execute after the HTML is parsed -->
+    <script type="module" src="/src/index.ts" defer></script>
+    <title>Stopwatch</title>
+  </head>
+
+  <body>
+    <!-- A section element with the ID 'stopwatch' which will be styled and manipulated with JavaScript -->
+    <section id="stopwatch"></section>
+    <section id="user-guide">
+      <h1>Stopwatch Guide</h1>
+      <p>Welcome to the Stopwatch App!</p>
+      <p>
+        This application allows you to control a stopwatch with the following
+        features:
+      </p>
+      <ul>
+        <li>
+          <strong>Start/Pause:</strong> Click the stopwatch or press "Space" or
+          "P" to toggle between start and pause.
+        </li>
+        <li>
+          <strong>Reset:</strong> Press the "R" key to reset the stopwatch.
+        </li>
+        <li>
+          <strong>Automatic State Saving:</strong> Your stopwatch's state is
+          saved automatically in the browser's localStorage, so it persists even
+          when you refresh the page.
+        </li>
+      </ul>
+      <p>
+        Follow the instructions to use the stopwatch efficiently. Happy timing!
+        Developed with &hearts; by
+        <a
+          class="custom-anchor"
+          href="http://github.com/raminsharifian"
+          target="_blank"
+          rel="noopener noreferrer"
+          >raminsharifian on GitHub</a
+        >
+      </p>
+    </section>
+  </body>
+</html>

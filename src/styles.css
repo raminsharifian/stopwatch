@@ -1,0 +1,167 @@
+/* Root variables for font family definitions */
+:root {
+  /* Define a custom font stack for sans-serif fonts */
+  --sans-serif-fonts: Roboto, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
+
+  /* Define a custom font stack for monospace fonts */
+  --monospace-fonts: "JetBrains Mono", "Courier New", Courier, monospace;
+}
+
+/* Universal selector and pseudo-elements reset */
+*,
+*::before,
+*::after {
+  /* Reset margin and padding for all elements to ensure consistent layout */
+  margin: 0;
+  padding: 0;
+
+  /* Set box-sizing to border-box so padding and border are included in the element's total width and height */
+  box-sizing: border-box;
+
+  /* Smooth scrolling for elements */
+  scroll-behavior: smooth;
+
+  /* Prevent text selection (useful for UI elements like buttons, but can be removed if not needed) */
+  user-select: none;
+}
+
+/* Set global font size and font family for the entire HTML document */
+html {
+  font-size: 16px; /* Base font size */
+  font-family: var(
+    --sans-serif-fonts
+  ); /* Use the sans-serif font stack defined in :root */
+}
+
+/* Styling for the body and #stopwatch element */
+body,
+#stopwatch {
+  /* Use Flexbox to center the content both vertically and horizontally */
+  display: flex;
+  padding: 1rem;
+  flex-direction: column; /* Stack elements vertically */
+  align-items: center; /* Center content horizontally */
+}
+
+/* Set the height of the body to the full viewport height */
+body {
+  background-color: #fff;
+  min-height: 100vh; /* Full viewport height */
+}
+
+/* Specific styles for the #stopwatch element */
+#stopwatch {
+  overflow: hidden;
+
+  justify-content: center;
+  min-height: 50vh;
+  /* Position element relative for absolute positioning of pseudo-elements */
+  position: relative;
+
+  /* Set a large font size for the stopwatch text */
+  font-size: calc(100vw * 0.08);
+
+  /* Allow the stopwatch to take up full width and height of the container */
+  width: 100%;
+  height: 100%;
+
+  /* Change cursor to a pointer when hovering over the stopwatch */
+  cursor: pointer;
+
+  /* Create a gradient background with multiple color stops and set a very large background size for animated effect */
+  background: linear-gradient(
+    321deg,
+    #ffffff,
+    #f5caff,
+    #ffffff,
+    #b0aeff,
+    #ffffff
+  );
+  background-size: 1000% 1000%; /* Large background size for smooth animation */
+
+  /* Apply animation to the background gradient */
+  -webkit-animation: AnimationName 30s ease infinite;
+  -moz-animation: AnimationName 30s ease infinite;
+  -o-animation: AnimationName 30s ease infinite;
+  animation: AnimationName 30s ease infinite;
+}
+
+/* Pseudo-element for extra styling on the #stopwatch */
+#stopwatch::after {
+  content: ""; /* Empty content (used for a visual effect) */
+  position: absolute; /* Position it absolutely inside the #stopwatch element */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1; /* Ensure this is above other content in the element */
+}
+
+/* Pseudo-element before the #stopwatch to display a label (e.g., name attribute) */
+#stopwatch::before {
+  content: attr(name); /* Use the 'name' attribute from the element */
+  font-size: 1rem; /* Set a smaller font size for the content */
+}
+
+#user-guide {
+  padding: 2rem;
+  padding-block-start: 2.5rem;
+  padding-block-end: 0.5rem;
+}
+
+.custom-anchor {
+  text-decoration: none !important;
+  color: #2964aa !important;
+}
+
+/* Keyframe animations for animating the background gradient */
+@-webkit-keyframes AnimationName {
+  0% {
+    background-position: 0% 94%; /* Starting background position */
+  }
+  50% {
+    background-position: 100% 7%; /* Middle background position */
+  }
+  100% {
+    background-position: 0% 94%; /* End background position */
+  }
+}
+
+@-moz-keyframes AnimationName {
+  0% {
+    background-position: 0% 94%;
+  }
+  50% {
+    background-position: 100% 7%;
+  }
+  100% {
+    background-position: 0% 94%;
+  }
+}
+
+@-o-keyframes AnimationName {
+  0% {
+    background-position: 0% 94%;
+  }
+  50% {
+    background-position: 100% 7%;
+  }
+  100% {
+    background-position: 0% 94%;
+  }
+}
+
+/* Standard keyframe animation for all browsers */
+@keyframes AnimationName {
+  0% {
+    background-position: 0% 94%;
+  }
+  50% {
+    background-position: 100% 7%;
+  }
+  100% {
+    background-position: 0% 94%;
+  }
+}
