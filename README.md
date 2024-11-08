@@ -86,7 +86,7 @@ In the above example:
 
 ## Demo
 
-Visit the live demo at [raminsharifian.github.io/stopwatch](#) to see the stopwatch in action.
+Visit the live demo at [raminsharifian.github.io/stopwatch](https://raminsharifian.github.io/stopwatch) to see the stopwatch in action.
 
 ## Contributing
 
